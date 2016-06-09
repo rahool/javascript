@@ -1,0 +1,480 @@
+<html>
+  <head>
+    <title>
+      JavaScript
+    </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .carousel-inner .item {
+        height: 100%;
+      }
+
+      #navigator {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        margin: 42px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 5em;
+      }
+
+      .heading {
+        text-align: left;
+        font-weight: bold;
+        font-size: 3em;
+      }
+
+      .info-box {
+        width: 33%;
+        display: inline-block;
+        border: 1px solid #efefef;
+        padding: 10px;
+      }
+
+      .info-box:hover {
+        cursor: pointer;
+        border: 1px solid #3333ff;
+      }
+
+      .sub-heading {
+        text-align: center;
+        font-size: 2em;
+      }
+
+      .item {
+        padding: 20px;
+      }
+
+      pre code {
+        font-size: 1.5em;
+        color: #3333ff;
+      }
+
+      div code {
+        font-size: 1.5em;
+      }
+
+      .code-next {
+        margin-top: 20px; 
+      }
+
+      .sub-info-box {
+        width: 50%;
+        display: none;
+        margin:0 auto;
+        position: absolute;
+        bottom: 42px;
+        left: 42px;
+        box-shadow: 10px -10px 60px -20px rgba(0,0,0,0.75);
+      }
+
+      .bullet {
+        font-size: 2em;
+      }
+
+      .desc-text {
+        font-size: 1.5em;
+      }
+
+      li:hover {
+        color: #3333ff;
+        text-shadow: 0px 0px 1px #000;
+      }
+    </style>
+    
+  </head>
+
+  <body>
+
+    <div id="carousel-js" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-js" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-js" data-slide-to="1"></li>
+        <li data-target="#carousel-js" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div style="font-size: 200px; font-weight:bold; color: #fff; text-shadow: 7px 7px 42px #000;">JavaScript</div>
+          <div style="background: #3333ff; width:70%; height: 20px; float:right; "></div>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+        <div class="item">
+          <div class="page">
+            <div class="heading" style="text-align: center;">Web page</div>
+            <div class="info-box">
+              <h1 id="html-heading">HTML</h1>
+              <div class="sub-heading">Content and Structure</div>
+            </div>
+            <div class="info-box">
+              <h1 id="css-heading">CSS</h1>
+              <div class="sub-heading">Presentation</div>
+            </div>
+            <div class="info-box">
+              <h1 id="js-heading">JavaScript</h1>
+              <div class="sub-heading">Behavior</div>
+            </div>
+
+          <div id="html-basic-structure" class="sub-info-box">
+          <pre>
+          <code class="language-html" data-lang="html">
+            &#60;html&#62;
+            &nbsp;&nbsp;&#60;head&#62;
+            &nbsp;&nbsp;...
+            &nbsp;&nbsp;&#60;/head&#62;<br>
+            &nbsp;&nbsp;&#60;body&#62;
+            &nbsp;&nbsp;...
+            &nbsp;&nbsp;&#60;/body&#62;
+            &#60;/html&#62;
+          </code>
+          </pre>
+        </div>
+
+        <div id="css-sample" class="sub-info-box">
+          <pre>
+          <code>
+          body {
+            font-size: 42px;
+            font-weight: bold;
+            margin: 10px;
+            padding: 10px;
+            background-color: red;
+          }
+          </code>
+          </pre>
+        </div>
+
+          </div>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+
+        
+
+        <div class="item">
+          <div class="heading">JavaScript</div>
+          <ul>
+          <li><span class="bullet">a <b>client side langauage</b></span></li>
+          <li><span class="bullet">runs inside a web browser</span></li>
+          <li><span class="bullet">web browsers have a <i>JavaScript</i> engine inside them</span></li>
+          <li><span class="bullet">cannot write a desktop application in <i>JavaScript</i></span></li>
+          <li><span class="bullet"><i>JavaScript</i> syntax is more like C</span></li>
+          <li><span class="bullet">now also used on server side and in desktop applications</span></li>
+          <li><span class="bullet"><i>Node.js</i> is an open-source, cross-platform runtime environment for developing server-side web applications</span></li>
+          </ul>
+
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Data Types</div>
+          <ul>
+          <li><span class="bullet">contains a small set of data types</span></li>
+          <li><span class="bullet">three primitive types <b><i>boolean</i></b>, <b><i>number</i></b>, and <b><i>string</i></b></span></li>
+          <li><span class="bullet">special values <b><i>null</i></b> and <b><i>undefined</i></b></span></li>
+          <li><span class="bullet">everything else is variations of the object type</span></li>
+          <li><span class="bullet">number is 64-bit floating point</span></li>
+          <li><span class="bullet">no integer type</span></li>
+          <li><span class="bullet">number also includes the special values <i>NaN</i> (not a number) and <i>Infinity</i></span></li>
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Strings</div>
+          <ul>
+          <li><span class="bullet">string is a sequence of zero or more Unicode characters</span></li>
+          <li><span class="bullet">no separate character type</span></li>
+          <li><span class="bullet">character is represented as a string of length 1</span></li>
+          <li><span class="bullet">strings are quoted using the <b>' (single quote) or " (double quote)</b> characters</span></li>
+          <li><span class="bullet">quote characters can be used interchangeably</span></li>
+          <li><span class="bullet"><b>\</b> is the escape character</span></li>
+          <li><span class="bullet">strings are immutable</span></li>
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Objects</div>
+          <ul>
+          <li><span class="bullet">Object is a container of <i>name/value</i> pairs</span></li>
+          <li><span class="bullet">objects and hashtables are the same thing</span></li>
+
+          <li><span class="bullet"><i>names</i> are strings</span></li>
+          <li><span class="bullet"><i>values</i> can be any of the data types, including other objects</span></li>
+          <code>
+          var myObject = {};<br>
+          var myObject = new Object();
+          </code>
+          <li class="code-next"><span class="bullet"><i>JavaScript</i> is <b>loosely typed</b>, so we don't use type names in declarations</span></li>
+          <li class="code-next"><span class="bullet">the langauage is not "untyped", but it's loose that any type can be used anywhere</span></li>
+
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Objects contd.</div>
+          <ul>
+          <li><span class="bullet">Object description is a set of comma-separated <i>name/value</i> pairs inside curly braces</span></li>
+          <code>
+          var myObject = {name: "Noname", age: 7, class: 2, section: 'C'};
+          </code>
+          <li class="code-next"><span class="bullet">two ways to to add, replace, or retrieve elements: subscript notation and dot notation</span></li>
+          <code>
+          myObject["name"] = "Noname";<br>
+          myObject.name = "Noname";
+          </code>
+          <li class="code-next"><span class="bullet">objects can easily be nested inside of other objects</span></li>
+
+          <li><span class="bullet">expressions can reach into the inner objects</span></li>
+          <code>
+          myObject.name.firstname.length
+          </code>
+          <li class="code-next"><span class="bullet">new members can be added to any object at any time by assignment</span></li>
+          <code>
+          myObject.nickname = 'Pappu';
+          </code>
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Arrays</div>
+          <ul>
+          <li><span class="bullet">are also hashtable objects</span></li>
+          <li><span class="bullet">no need to declare the size while constructing</span></li>
+          <li><span class="bullet">grows automatically</span></li>
+          <li><span class="bullet">values are located by a key, not by an offset</span></li>
+          <li><span class="bullet">two ways to make a new array:</span></li>
+          <code>
+          var myArray = [];<br>
+          var myArray = new Array();
+          </code>
+
+          </ul>       
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Arrays contd.</div>
+          <ul>
+          <li><span class="bullet">are not typed</span></li>
+          <li><span class="bullet">can contain <i>numbers, strings, booleans, objects, functions,</i> and <i>arrays</i></span></li>
+          <li><span class="bullet">can mix strings and numbers and objects in the same array</span></li>
+
+          <li><span class="bullet">arrays literal notation</span></li>
+          <code>
+          letters = ['a', 'b', 'c', 'd', 'e'];<br>
+          emptyArray = [];<br>
+          numArr = [3, 8, 11, 72, 7, 19, 21];<br>
+          </code>
+          </ul>       
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Functions</div>
+          <ul>
+          <li><span class="bullet">a function is an object</span></li>
+          <code>
+          /* Declare the function 'myFunction' */<br>
+          function myFunction(myObject) {<br>
+             myObject.name = "NewName";<br>
+          }
+          </code>
+          <li class="code-next"><span class="bullet">can contain members just as other objects</span></li>
+          <li><span class="bullet">always returns a value</span></li>
+          <li><span class="bullet">default return value is <i>undefined</i></span></li>
+
+          <li><span class="bullet">function allows an object to act as a class, containing a constructor and a set of related methods</span></li>
+
+          <li><span class="bullet">when a function is a member of an object, it is called a method</span></li>
+          <li><span class="bullet">a special variable, called <b><i>this</i></b> is set to the object when we call a method of the object</span></li>
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Variables</div>
+          <ul>
+          <li><span class="bullet">defined with the <b><i>var</i></b> statement</span></li>
+
+          <li><span class="bullet">if the <b><i>var</i></b> statement appears outside of any function, then members are added to the Global Object</span></li>
+          <li><span class="bullet">if it appears inside a function, the scope is local to the function</span></li>
+
+          <li><span class="bullet">vars which are not explicitly initialized are given the value <i>undefined</i></span></li>
+
+          <li><span class="bullet">vars are not typed</span></li>
+
+          <li><span class="bullet">a new set of vars is made every time the function is called</span></li>
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+         <div class="item">
+          <div class="heading">Operators</div>
+          <ul>
+          <li><span class="bullet">most of the operators in <i>JavaScript</i> works the same way as in other languages</span></li>
+          <li><span class="bullet"><i>but, some have a few differences</i></span></li>
+
+          <li><span class="bullet">arithmetic <b>+ - * / %</b></span></li>
+          <li><span class="bullet">comparision <b>== != < > <= >=</b></span></li>
+          <li><span class="bullet">logical <b>&& || !</b></span></li>
+          <li><span class="bullet">bitwise <b>& | ^ >> >>> <<</b></span></li>
+          <li><span class="bullet">ternary <b>?:</b></span></li>
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">+ Operator</div>
+          <ul>
+          <li><span class="bullet">the <b>+</b> operator is used for both addition and concatenation</span></li>
+          <li><span class="bullet">if any of the operands is a string, it concatenates otherwise adds</span></li>
+
+          <li><span class="bullet"><b>+</b> unary operator can convert strings to numbers</span></li>
+          <code>+"42" = 42</code>
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">==, !=, ===, !== Operators</div>
+          <ul>
+          <li><span class="bullet">== and != can do type coercion</span></li>
+          <li><span class="bullet">=== and !== do not do type coercion <span style="color: green;"><b>these are better</b></span></li>
+
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+         <div class="item">
+          <div class="heading">Logical Operators</div>
+          <ul>
+          <li><span class="bullet">&& <i>and</i></span></li> 
+          <code>expr1 && expr2</code>
+          <div class="desc-text"> 
+          Returns expr1 if it can be converted to false; otherwise, returns expr2. Thus, when used with Boolean values, && returns true if both operands can be converted to true; otherwise, returns false
+          </div>
+          <li class="code-next"><span class="bullet">|| <i>or</i></span></li>
+          <code>expr1 || expr2</code>
+          <div class="desc-text">
+          returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values, || returns true if either operand can be converted to true; if both can be converted to false, returns false
+          </div>
+
+          <li class="code-next"><span class="bullet">! <i>not</i></span></li>
+          <code>!expr</code>
+          <div class="desc-text"> 
+          returns false if its single operand can be converted to true; otherwise, returns true
+          </div>
+          <li class="code-next"><span class="bullet">expressions that can be converted to false are:</span></li>
+          <div class="desc-text">
+          null, NaN, 0, "", undefined
+          </div>
+          <li class="code-next"><span class="bullet">all other values (including all objects) are true</span></li>
+          </ul>
+
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Identifiers</div>
+          <li class="code-next"><span class="bullet">starts with a letter or <b>_ or $</b></span></li>
+          <li class="code-next"><span class="bullet">followed by zero or more <i>letters, digits, _ or $</i></span></li>
+          <li class="code-next"><span class="bullet">by convention, all variables, parameters, members, and function names start with lower case</span></li>
+          <li class="code-next"><span class="bullet">except for constructors, which start with upper case</span></li>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Comments</div>
+          <li class="code-next"><span class="bullet">single line <b>//</b></span></li>
+          <li class="code-next"><span class="bullet">multi-line <b>/* */</b></span></li>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading"></div>
+          
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div id="navigator" class="btn-group" role="group" aria-label="...">
+        <button class="btn btn-default left" href="#carousel-js" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="btn btn-default right" href="#carousel-js" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+        
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".carousel").carousel({interval: false});
+        $("#html-heading").on('click', function(){
+          $('.sub-info-box').hide();
+          $('#html-basic-structure').fadeIn();
+        });
+        $("#css-heading").on('click', function(){
+          $('.sub-info-box').hide();
+          $('#css-sample').fadeIn();
+        });
+        $("#js-heading").on('click', function(){
+          $(".carousel").carousel(2);
+        });
+
+      });
+    </script>
+  </body>
+</html>  
