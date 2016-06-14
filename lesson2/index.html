@@ -1,0 +1,449 @@
+<html>
+  <head>
+    <title>
+      JavaScript - Lesson 2
+    </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    
+  </head>
+
+  <body>
+
+    <div id="carousel-js" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-js" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-js" data-slide-to="1"></li>
+        <li data-target="#carousel-js" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+	<div class="item active">
+          <div style="font-size: 128px; font-weight:bold; color: #fff; text-shadow: 7px 7px 42px #000;">JavaScript</div>
+	  <div style="background: #3333ff; width:70%; height: 20px; float:right; "><span style="color: #fff; padding: 10px; font-weight: bold;">Two</span></div>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Recap</div>
+          <div class="inline-box recap"><h3><b>HTML+CSS+JS</b></h3></div>
+          <div class="inline-box recap"><h4><b>client-side</b></h5></div>
+          <div class="inline-box recap"><h3>data types</h3></div>
+          <div class="inline-box recap"><h4>string</h4></div>
+          <div class="inline-box recap"><h1>Objects</h1></div>
+          <div class="inline-box recap"><h3>Arrays</h3></div>
+          <div class="inline-box recap"><h3>Functions</h3></div>
+          <div class="inline-box recap"><h1>==/===</h1></div>
+          <div class="inline-box recap"><h4>this</h4></div>
+          <div class="inline-box recap"><h5>Variables</h5></div>
+          <div class="inline-box recap"><h2>var</h2></div>
+          <div class="inline-box recap"><h3>Operators</h3></div>
+          <div class="inline-box recap"><h1><b>loosely typed</b></h1></div>
+          <div class="inline-box recap"><h1>+</h1></div>
+          <div class="inline-box recap"><h3>expr1 && expr2</h3></div>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+       <div class="item">
+          <div class="heading">Some useful things</div>
+          <ul>
+          <li><span class="bullet">window.<b>alert</b>("<i>some message</i>");</span></li>
+          <li><span class="bullet">document.<b>write</b>("<i>some text</i>");</span></li>
+          <li><span class="bullet">document.<b>getElementById</b>("<i>testId</i>");</span></li>
+          <li><span class="bullet">document.<b>getElementsByTagName</b>("<i>div</i>i");</span></li>
+          <li><span class="bullet">console.<b>log</b>("<i>some text</i>");</span></li>
+          <li><span class="bullet">innerHTML</span></li>
+          <li><span class="bullet">window.<b>prompt</b>("<i>some message</i>", <i>"default"</i>);</span></li>
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="inline-box">
+          <div class="heading">if</div>
+            <pre>
+            <code>
+  if (expression)
+    statement
+            </code>
+            </pre>
+          </div>
+          <div class="inline-box">
+          <div class="heading">if...else</div>
+            <pre>
+            <code>
+  if (expression)
+    statement1
+  else
+    statement2
+            </code>
+            </pre>
+          </div>
+          <div class="inline-box">
+          <div class="heading">else if</div>
+            <pre>
+            <code>
+  if (expression)
+    statement1
+  else if
+    statement2
+  else if
+    statement3
+  else
+    statement4
+            </code>
+            </pre>
+          </div>
+          
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">switch</div>
+            <pre>
+            <code>
+  <b>switch</b> (expression)
+  {
+    <b>case</b> condition 1: statements
+                      <b>break</b>;
+
+    <b>case</b> condition 2: statements
+                      <b>break</b>;
+        ...
+
+    <b>case</b> condition n: statements
+                      <b>break</b>;
+
+    <b>default</b>: statements
+}
+            </code>
+            </pre>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+
+        <div class="item">
+          <div class="heading">while</div>
+          <pre>
+          <code>
+  <b>while</b> (expression)
+    statement
+          </code>
+          </pre>
+          <div class="heading">do/while</div>
+          <pre>
+          <code>
+  <b>do</b>
+    statement
+  <b>while</b> (expression);
+          </code>
+          </pre>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">for</div>
+          <pre>
+          <code>
+  <b>for</b>(initialize ; test ; increment)
+    statement
+          </code>
+          </pre>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+
+        <div class="item">
+          <div class="heading">for/in</div>
+          <pre>
+          <code>
+  <b>for</b> (variable in object)
+        statement
+          </code>
+          </pre>
+          <li class="code-next"><span class="bullet">loops through the properties of an object</span></li>
+          <li><span class="bullet">this will also loop through all the properties of all the objects that it inherits from</span></li>
+          <li><span class="bullet">to loop through the properties of just the current object use:</span></li>
+          <pre>
+          <code>
+  for (var name in object) {
+    if (object.<b>hasOwnProperty</b>(name)) {
+      statement
+    }
+  } 
+          </code>
+          </pre>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">break</div>
+          <span class="bullet">causes the innermost enclosing loop or switch statement to exit immediately</span><br>
+          <code>
+            break;
+          </code>
+          <h3><b>labeled break</b></h3>
+          <ul>
+          <li><span class="bullet">to break out of a labeled statement</span></li>
+          <li><span class="bullet">needs to be nested within the referenced label</span></li>
+          <li><span class="bullet">labeled statement can be any block statement</span></li>
+          <pre>
+          <code>
+  <b>outer_block:</b> {
+    <b>inner_block:</b> {
+      console.log('1');
+      break <b>outer_block</b>; // breaks out of both inner_block and outer_block
+      console.log('2'); // skipped
+    }
+    console.log('3'); // skipped
+  }
+          </code>
+          </pre>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">labeled break in loops</div>
+          <ul>
+          <li><span class="bullet">put label on a loop and then can break from that loop</span></li>
+          <li><span class="bullet">useful in case of nested loops</span></li>
+          <pre>
+          <code>
+  <b>outer:</b> for (var i=0; i<5; ++i){
+    console.log("outer: ", i);
+    <b>inner:</b> for(var j=0; j<5; ++j){
+      console.log("inner: ", j);
+      break <b>outer</b>;
+    }
+  }
+          </code>
+          </pre>
+          <li><span class="bullet">if you forget to declare a variable, JavaScript assumes it as a global variable</span></li>
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">continue</div>
+          <ul>
+          <li><span class="bullet">terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration</span></li>
+
+          <h3><b>labeled continue</b></h3>
+          <li><span class="bullet">continue statement needs to be nested within this labeled statement</span></li>
+          <pre>
+          <code>
+  <b>outer:</b> for (var i=0; i<5; ++i){
+    console.log("outer: ", i);
+    <b>inner:</b> for(var j=0; j<5; ++j){
+      console.log("inner: ", j);
+      if (j == 2){
+        continue <b>outer</b>;
+      }
+    }
+  }
+          </code>
+          </pre>
+
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">throw</div>
+          <ul>
+          <li><span class="bullet">to signal an error or exceptional condition</span></li>
+          <pre>
+          <code>
+  <b>throw</b> new Error("msg");
+          </code>
+          </pre>
+          <br>
+          <pre>
+          <code>
+  <b>throw</b> {name: "exceptionName", message: "msg"}; 
+          </code>
+          </pre>
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">try/catch/finally</div>
+          <ul>
+          <li><span class="bullet">exception handling mechanism</span></li>
+          <pre>
+          <code>
+  <b>try</b> {
+    ...
+  }
+  <b>catch</b> (e) {
+    ...
+  }
+  <b>finally</b> {
+    ...
+  }
+          </code>
+          </pre>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Creating new objects</div>
+          <ul>
+          <li><span class="bullet">with literal notation</span></li>
+          <pre>
+          <code>
+  var obj = { property_1: value_1, // property_# may be an identifier...
+              2: value_2, // or a number...
+              // ...,
+              "property n": value_n }; // or a string
+          </code>
+          </pre>
+          </ul>
+         
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Creating new objects</div>
+          <ul>
+          <li><span class="bullet">using a constructor function</span></li>
+          <pre>
+          <code>
+  function MyObject(name, type) {
+    this.name = name;
+    this.type = type;
+  }
+
+  var myobj = new MyObject("Test Object", "Test Type");
+          </code>
+          </pre> 
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Creating new objects</div>
+          <ul>
+          <li><span class="bullet">using the Object.create() method</span></li>
+          <li><span class="bullet">creates a new object with the specified prototype object and properties</span></li>
+          <pre>
+          <code>
+Object.create(proto [, propertiesObject ]);          
+          </code>
+          </pre> 
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading"></div>
+          
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading"></div>
+          
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading"></div>
+          
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading"></div>
+          
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading"></div>
+          
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div id="navigator" class="btn-group" role="group" aria-label="...">
+        <button class="btn btn-default left" href="#carousel-js" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="btn btn-default right" href="#carousel-js" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+        
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".carousel").carousel({interval: false});
+        $("#html-heading").on('click', function(){
+          $('.sub-info-box').hide();
+          $('#html-basic-structure').fadeIn();
+        });
+        $("#css-heading").on('click', function(){
+          $('.sub-info-box').hide();
+          $('#css-sample').fadeIn();
+        });
+        $("#js-heading").on('click', function(){
+          $(".carousel").carousel(2);
+        });
+
+      });
+    </script>
+  </body>
+</html>  
