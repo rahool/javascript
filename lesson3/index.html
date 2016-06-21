@@ -1,0 +1,441 @@
+<html>
+  <head>
+    <title>
+      JavaScript - Lesson 3
+    </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <style type="text/css">
+.box {
+  margin: auto;
+  position: absolute;
+  left:0; 
+  right:0;
+  top:0;
+  bottom:0;
+  border: 1px solid #e5e5e5;
+  padding: 5px;
+}
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="carousel-js" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-js" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-js" data-slide-to="1"></li>
+        <li data-target="#carousel-js" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+	<div class="item active">
+          <div style="font-size: 128px; font-weight:bold; color: #fff; text-shadow: 7px 7px 42px #000;">JavaScript</div>
+	  <div style="background: #3333ff; width:70%; height: 20px; float:right; "><span style="color: #fff; padding: 10px; font-weight: bold;">Three</span></div>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Browser Object Model</div>
+          <h3><b>Interface between the browser and JavaScript</b></h3>
+
+          <h2><b><i>window</i></b> object properties</h2>
+          <ul>
+          <li><span class="bullet">window.navigator</span></li>
+          <li><span class="bullet">window.location</span></li>
+          <li><span class="bullet">window.history</span></li>
+          <li><span class="bullet">window.document</span></li>
+          <li><span class="bullet">window.innerHeight</span></li>
+          <li><span class="bullet">window.innerWidth</span></li>
+          <li><span class="bullet">window.screen <i>etc.</i></span></li>
+          </ul>
+
+
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading"></div>
+<pre>          
+<code>
+var info = '';
+
+info += 'window.navigator.vendor: ' + window.navigator.vendor + '\n';
+info += 'window.location: ' + window.location + '\n';
+
+alert(info);
+</code>
+</pre>
+
+<pre>
+<code>
+history.back();
+</code>
+</pre>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading"></div>
+          <h2><b><i>window</i></b> object methods</h2>
+          <ul>
+          <li><span class="bullet">window.open()</span></li>
+          <li><span class="bullet">window.close()</span></li>
+          <li><span class="bullet">window.alert()</span></li>
+          <li><span class="bullet">window.confirm()</span></li>
+          <li><span class="bullet">window.focus()</span></li>
+          <li><span class="bullet">window.moveTo()</span></li>
+          <li><span class="bullet">window.prompt()</span></li>
+          <li><span class="bullet">window.resizeTo()</span></li>
+          <li><span class="bullet">window.scrollTo()</span></li>
+          <li><span class="bullet">window.setTimeout()</span></li>
+          <li><span class="bullet">window.setInterval() <i>etc.</i></span></li>
+          </ul>
+  
+
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading"></div>
+          <h2><b><i>window</i></b> object events</h2>
+          <ul>
+          <li><span class="bullet">window.onchange</span></li>
+          <li><span class="bullet">window.onscroll</span></li>
+          <li><span class="bullet">window.onresize</span></li>
+          <li><span class="bullet">window.onclose</span></li>
+          <li><span class="bullet">window.onload</span></li>
+          <li><span class="bullet">window.onmousedown <i>etc.</i></span></li>
+          </ul>
+
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Document Object Model (DOM)</div>
+          <ul>
+          <li><span class="bullet">When a web page is loaded, the browser creates a Document Object Model of the page</span></li>
+          <li><span class="bullet">defines the logical structure of the page</span></li>
+          <li><span class="bullet">represented as a tree</span></li>
+          <li><span class="bullet">everything is a node</span></li>
+
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Working with DOM</div>
+<pre>          
+<code>
+var ele = window.document.getElementById("some-id");
+var newElement = window.document.createElement("div");
+var someText = window.document.createTextNode("Some text");
+newElement.appendChild(someText);
+ele.appendChild(newElement);
+</code>          
+</pre>
+<pre>          
+<code>
+var arr = window.document.getElementsByTagName("span");
+var arr = window.document.getElementsByClassName("some-class");
+</code>
+</pre>
+
+<h3>element properties: <b><i>childNodes, firstChild, parentNode, nextSibling, previousSibling</i></b></h3>
+
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+    <div class="item">
+          <div class="heading">More DOM manipulations</div>
+<h3>element nodes have attributes that can be get and set</h3>
+<pre>          
+<code>
+myElement.getAttribute(attribute);  
+myElement.setAttribute(attribute, value);  
+</code>
+
+</pre>
+<h3>to add or remove nodes in a document</h3>
+<pre>         
+<code>
+myElement.removeChild(someChildNode);
+myElement.appendChild(newChildNode);
+myElement.insertBefore(node1, node2); //inserts node1 as a child before node2
+myElement.replaceChild(newNode, oldNode);
+</code> 
+</pre>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+
+       <div class="item">
+          <div class="heading">Common events</div>
+          <ul>
+          <li><span class="bullet">onclick</span></li>
+          <li><span class="bullet">onload</span></li>
+          <li><span class="bullet">onmouseover</span></li>
+          <li><span class="bullet">onmouseout</span></li>
+          <li><span class="bullet">onmousedown</span></li>
+          <li><span class="bullet">onmouseup</span></li>
+          <li><span class="bullet">onblur</span></li>
+          <li><span class="bullet">onfocus</span></li>
+          </ul>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Events</div>
+<h3>old pattern</h3>
+<pre>          
+<code>
+&lt;a href="#" onclick="alert(event)"&gt;Click&lt;/a&gt;
+&lt;a href="#" onclick="alert(this);"&gt;Click&lt;/a&gt;
+&lt;a href="#" onclick="handle(event, this);"&gt;Click&lt;/a&gt;
+</code>
+</pre>     
+          
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Event Listeners</div>
+<pre>          
+<code>
+element.addEventListener(eventType, function, useCapture);  
+element.removeEventListener(eventType, function);  
+</code>
+
+<code>
+var myElement = document.getElementById('some-id');
+myElement.addEventListener('click', handleClick);
+
+function handleClick(event){
+  alert(event);
+}
+  
+</code>          
+</pre>
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Event Propagation - Bubbling</div>
+          <span class="bullet">innermost element's event is handled first and then the outer element's event is handled</span> 
+        <div id="div1a" class="box" style="display:inline-block;background-color:red;width:50%;height: 50%;">div1a
+  <div id="div2a" class="box" style="background-color:blue;width:80%;height: 80%;">div2a
+    <div id="div3a" class="box" style="background-color:green;width:80%;height: 80%;">div3a
+      <div id="div4a" class="box" style="background-color:orange;width:80%;height: 80%;">div4a
+        <div id="div5a" class="box" style="background-color:grey;width:80%;height: 80%;">div5a
+    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h4><i>click on any div to see how event propagates</i></h4>
+
+<script type="text/javascript">
+function changeColor(div){
+  var highlightColor = 'yellow';
+  div.style.backgroundColor = highlightColor;
+  alert("event reached " + div.id);
+}
+
+var div1a = document.getElementById("div1a");
+var div2a = document.getElementById("div2a");
+var div3a = document.getElementById("div3a");
+var div4a = document.getElementById("div4a");
+var div5a = document.getElementById("div5a");
+
+div1a.addEventListener('click', function(){
+  changeColor(div1a);
+}, false);
+
+div2a.addEventListener('click', function(){
+  changeColor(div2a);
+}, false);
+
+div3a.addEventListener('click', function(){
+  changeColor(div3a);
+}, false);
+
+div4a.addEventListener('click', function(){
+  changeColor(div4a);
+}, false);
+
+div5a.addEventListener('click', function(){
+  changeColor(div5a);
+}, false);
+
+</script>
+
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">Event Propagation - Capturing</div>
+          <span class="bullet">outermost element's event is handled first and then the inner</span>
+       <div id="div1b" class="box" style="display:inline-block;background-color:red;width:50%;height: 50%;">div1b
+  <div id="div2b" class="box" style="background-color:blue;width:80%;height: 80%;">div2b
+    <div id="div3b" class="box" style="background-color:green;width:80%;height: 80%;">div3b
+      <div id="div4b" class="box" style="background-color:orange;width:80%;height: 80%;">div4b
+        <div id="div5b" class="box" style="background-color:grey;width:80%;height: 80%;">div5b
+    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h4><i>click on any div to see how event propagates</i></h4>
+
+<script type="text/javascript">
+
+var div1b = document.getElementById("div1b");
+var div2b = document.getElementById("div2b");
+var div3b = document.getElementById("div3b");
+var div4b = document.getElementById("div4b");
+var div5b = document.getElementById("div5b");
+
+div1b.addEventListener('click', function(){
+  changeColor(div1b);
+}, true);
+
+div2b.addEventListener('click', function(){
+  changeColor(div2b);
+}, true);
+
+div3b.addEventListener('click', function(){
+  changeColor(div3b);
+}, true);
+
+div4b.addEventListener('click', function(){
+  changeColor(div4b);
+}, true);
+
+div5b.addEventListener('click', function(){
+  changeColor(div5b);
+}, true);
+
+</script>
+
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">AJAX</div>
+          <h2><b>Asynchronous JavaScript and XML</b></h2>
+          <ul>
+          <li><span class="bullet">allows for updating parts of a web page without having to reload the entire page</span></li>
+
+          <li><span class="bullet">XMLHttpRequest object</span></li>
+          <li><span class="bullet">used to exchange data with a server</span></li>
+          <li><span class="bullet">used to fetch data in xml, html, json, plain text</span></li>
+          </ul>
+          
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading">JSON</div>
+          <h2><b>JavaScript Object Notation</b></h2>
+
+          <ul>
+          <li><span class="bullet">lightweight data interchange format
+          derived from JavaScript object notation syntax</span></li>
+          <li><span class="bullet">is plain text</span></li>
+          <li><span class="bullet">to convert a string into an object</span></li>
+          </ul>
+<code>
+var obj = JSON.parse(text);  
+</code>          
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+    
+        <div class="item">
+          <div class="heading"></div>
+          
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="heading"></div>
+          
+          <div class="carousel-caption">
+            <h3></h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div id="navigator" class="btn-group" role="group" aria-label="...">
+        <button class="btn btn-default left" href="#carousel-js" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="btn btn-default right" href="#carousel-js" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+        
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".carousel").carousel({interval: false});
+        $("#html-heading").on('click', function(){
+          $('.sub-info-box').hide();
+          $('#html-basic-structure').fadeIn();
+        });
+        $("#css-heading").on('click', function(){
+          $('.sub-info-box').hide();
+          $('#css-sample').fadeIn();
+        });
+        $("#js-heading").on('click', function(){
+          $(".carousel").carousel(2);
+        });
+
+      });
+    </script>
+  </body>
+</html>  
