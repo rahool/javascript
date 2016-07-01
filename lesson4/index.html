@@ -254,6 +254,10 @@ b:hover {
        } else if (e.keyCode == 39 || e.keyCode  == 40){
           $('button.active').next().focus();
           $('button.active').next().trigger('click');
+          if ($('button.active').length == 0){
+            $('button:first').addClass('active');
+            $('button:first').trigger('click');
+          }
        }
     });
   });
