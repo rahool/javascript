@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+body{
+  margin: 0;
+  font-family: sans-serif;
+} 
+
+div {
+  border: 1px solid #aaa;
+  margin: 5px;
+  padding: 5px;
+}  
+
+#top-container {
+  height: 96vh;
+  width: 95vw;
+}
+
+.inner-box {
+  float: left;
+}
+
+#demo-header {
+  height: 10vh;
+}
+
+#left-sidebar {
+  height: 65vh;
+  width: 20vw;
+}
+
+#right-sidebar {
+  height: 65vh;
+  width: 20vw;
+  float: right;
+}
+
+#main-content {
+  height: 65vh;
+  width: 40vw;
+}
+
+#footer {
+  height: 10vh;
+  clear: both;
+}
+
+#my-btn {
+  width: 20px;
+  height: 20px;
+  background-color: #ff0000;
+  position: relative;
+}
+  </style>
+</head>
+<body>
+<div id="top-container">
+  <div id="demo-header">
+  #demo-header
+  <h1 style="margin:0; text-align:center;">jQuery selectors demo</h1>
+  </div>
+  <div id="left-sidebar" class="inner-box">
+  #left-sidebar .inner-box
+  <img src=""></img>
+  <div id="my-btn"></div>
+  </div>
+  <div id="main-content" class="inner-box">
+  #main-content .inner-box
+    <ul class="super-list">
+      <li>Item 1</li>
+      <li>Item 2
+        <ul class="sub-list">
+          <li>Nested item 1</li>
+          <li>Nested item 2</li>
+          <li>Nested item 3</li>
+        </ul>
+      </li>
+      <li>Item 3</li>
+    </ul>
+  </div>
+  <div id="right-sidebar" class="inner-box">
+  #right-sidebar .inner-box
+    <p>Some text</p>
+    <div></div>
+    <p class="more-text">Some more text</p>
+  </div>
+  <div id="footer">
+  #footer
+  </div>
+
+</div>  
+
+<script src="lib/jquery-1.12.2.js"></script>
+<script>
+$(document).ready(function(){
+
+  //jQuery('*').css('border-color', 'red');
+
+  //select all elements with the given class
+  //jQuery('.inner-box').css('background-color', '#ffaaaa');
+ // jQuery('p.more-text').css('background-color', '#ffaaaa');
+
+  //selects a single element with the given id attribute.
+  //jQuery('#footer').css('background-color', '#ffaaaa');
+
+  //jQuery('#main-content .sub-list').css('background-color', '#ffaaaa');
+
+  //select direct child
+  //jQuery('#main-content > ul').css('background-color', '#ffaaaa');
+
+  //selects the first matched element
+  //jQuery('li:first').css('background-color', '#ffaaaa');
+
+  //selects the last matched element
+  //jQuery('li:last').css('background-color', '#ffaaaa');
+
+  //selects odd elements, zero-indexed
+  //jQuery('.sub-list li:odd').css('background-color', '#ffaaaa');
+
+  //selects even elements, zero-indexed
+  //jQuery('.sub-list li:even').css('background-color', '#ffaaaa');
+
+  //selects the element that is the root of the document
+  //jQuery(':root').css('background-color', '#ffaaaa');
+
+  //selects elements which contain at least one element that matches the specified selector
+  //jQuery('.inner-box:has(ul)').css('background-color', '#ffaaaa');
+
+  //select all elements that have no children (including text nodes)
+  //jQuery('div:empty').css('background-color', '#ffaaaa');
+
+  //Animations
+  //$('#left-sidebar').hide(500).delay(500).show(500);
+  //$('#right-sidebar').slideUp(500).slideDown(500);
+  //$('#right-sidebar').fadeOut(500).fadeIn(500);
+  //$('#right-sidebar').animate({'height': '30vh'}, 500);
+  //$('#my-btn').animate({'left': '300px', 'top': '100px'}, 5000);
+
+  //Attributes
+  //jQuery('img').attr('src', 'https://pbs.twimg.com/profile_images/633782900077408256/F541mrSs_400x400.jpg');
+ // jQuery('p:last').text('New text');
+
+
+  //jQuery('.sub-list').parent().css('background-color', '#ffaaaa');
+  //jQuery('.sub-list').parents().css('background-color', '#ffaaaa');
+  //jQuery('ul').children().css('background-color', '#ffaaaa');
+
+  //event handler 
+});
+</script>
+
+</body>
+</html>

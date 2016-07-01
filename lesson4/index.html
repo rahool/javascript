@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+body{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+}    
+.col {
+  width: 30vw;
+  height: 100%;
+  float: left;
+}
+
+#col1 {
+  background-color: #ff7777;
+}
+
+#col2 {
+  width: 40vw;
+  background-color: #77ff77;
+}
+
+#col3 {
+  background-color: #7777ff;
+}
+
+#header {
+  height: 10vh;
+  padding: 0px;
+  padding-bottom: 21px;
+  padding-left: 21px;
+  border-bottom: 1px solid;
+  box-shadow: 0px 11px 11px -11px rgba(0,0,0,0.75);
+  background-color: #05568d;
+  color: #fff;
+}
+
+.content {
+  height: 90vh;
+  display: none;
+  font-size: 5vh;
+  padding-left: 5vh;
+}
+
+.page-btn {
+  width: 7%;
+  height: 100%;
+  border: none;
+  background: none;
+  border-top: 2px solid #eee;
+  cursor: pointer;
+}
+
+.page-btn:focus {
+  border: none;
+  border-top: 7px solid #eee;
+  outline: none;
+}
+
+.active {
+  border: none;
+  border-top: 7px solid #eee;
+  outline: none;
+}
+
+.heading {
+  font-size: 5vh;
+  font-weight: bold;
+  padding: 10px;
+  font-style: italic;
+  margin-right: 5vw;
+  cursor: pointer;
+}
+
+pre {
+  margin: 0;
+}
+
+b {
+  text-shadow: 0px 0px 1px #05568d;
+  color: #05568d;
+}
+
+b:hover {
+  color: #FF6961;
+}
+
+</style>
+</head>
+<body>
+
+<div id="container">
+  <div id="header">
+  <span class="heading">jQuery</span>
+  <button id="page1-btn" class="page-btn" name="page1"></button>
+  <button id="page2-btn" class="page-btn" name="page2"></button>
+  <button id="page3-btn" class="page-btn" name="page3"></button>
+  <button id="page4-btn" class="page-btn" name="page4"></button>
+  <button id="page5-btn" class="page-btn" name="page5"></button>
+  <button id="page6-btn" class="page-btn" name="page6"></button>
+  <button id="page7-btn" class="page-btn" name="page7"></button>
+  <button id="page8-btn" class="page-btn" name="page8"></button>
+  <button id="page9-btn" class="page-btn" name="page9"></button>
+  </div>
+
+  <div id="page0" class="content">
+  <h3>a JavaScript library</h3>
+  <h1>write less, do more.</h1>
+  
+  </div>
+  <div id="page1" class="content">
+  <h3>makes it easy</h3>
+  <ul>
+    <li>to find the elements in a document</li>
+    <li>manipulate elements</li>
+    <li>event handling</li>
+    <li>animations</li>
+    <li>Ajax</li>
+  </ul>
+  </div>
+
+  <div id="page2" class="content">
+  <h3>download</h3>
+  <a href="http://jquery.com/download">http://jquery.com/download</a>
+  <h5>to use jQuery from a CDN, just reference the jQuery file in the script tag directly from the CDN domain</h5>
+  <ul>
+    <li><a href="https://code.jquery.com/">jQuery CDN</a></li>
+    <li><a href="https://developers.google.com/speed/libraries/#jquery">Google CDN</a></li>
+    <li><a href="https://www.asp.net/ajax/cdn#jQuery_Releases_on_the_CDN_0">Microsoft CDN</a></li>
+  </ul>  
+  </div>
+
+  <div id="page3" class="content">
+  <h3>basics</h3>
+  <ul>
+    <li>single global function named <b><i>jQuery()</i></b></li>
+    <li>global symbol <i><b>$</b></i> shortcut for jQuery</li>
+  </ul>  
+  </div>
+
+  <div id="page4" class="content">
+  <h3>jQuery() function</h3>
+  <h5>heavily overloaded</h5>
+
+  <h5 style="margin-bottom:0;">four different ways to invoke it</h5>
+  <ul style="margin-top:0;">
+    <li>pass a css selector</li>
+    <li>pass an Element or Document or Window object</li>
+    <li>pass a string of HTML text</li>
+    <li>pass a function</li>
+  </ul>  
+  </div>
+
+  <div id="page5" class="content">
+  <h3>selectors</h3>
+  <pre>
+  <code>
+  $(<i>"<b>#myDiv</b>"</i>);
+  $(<i>"<b>.myClass</b>"</i>);
+  $(<i>"<b>tr:first</b>"</i>);
+  $(<i>"<b>div:has(p)</b>"</i>);
+  $(<i>"<b>td:parent</b>"</i>);
+  $(<i>"<b>td:empty</b>"</i>);
+  ...
+  </code>
+  </pre>
+  <a href="http://api.jquery.com/category/selectors/" target="_blank">http://api.jquery.com/category/selectors</a>
+  </div>
+
+  <div id="page6" class="content">
+  <iframe src="jquery_selectors_demo.html" style="width: 100%; height:95%; border: none;"></iframe>
+  </div>
+
+  <div id="page7" class="content">
+  <h3>manipulation</h3>
+  <pre>
+  <code>
+  $(<i>"#myDiv"</i>).<b>addClass</b>(<i>"myClass"</i>);
+  $(<i>"#myDiv"</i>).<b>removeClass</b>(<i>"myClass"</i>);
+  $(<i>".inner"</i>).<b>append</b>(<i>"&lt;span&gt;Test&lt;/span&gt;"</i>);
+  $(<i>".inner"</i>).<b>attr</b>(<i>'id'</i>, <i>'newId'</i>);
+  $(<i>"#myDiv"</i>).<b>css</b>(<i>'border'</i>, <i>'1px solid red'</i>);
+  $(<i>"#myDiv"</i>).<b>html</b>();
+  ...
+  </code>
+  </pre>
+  <a href="http://api.jquery.com/category/manipulation/" target="_blank">http://api.jquery.com/category/manipulation</a>
+  </div>
+
+  <div id="page8" class="content">
+  <h3>events</h3>
+  <pre>
+  <code>
+  $(<i>"#myDiv"</i>).<b>on</b>(<i>"click"</i>, function() {
+    console.log($(<i>this</i>).text());
+  });
+
+  $(<i>".myClass"</i>).<b>trigger</b>(<i>"click"</i>);
+  ...
+  </code>
+  </pre>
+  <a href="http://api.jquery.com/category/events/" target="_blank">http://api.jquery.com/category/events</a>
+  </div>
+
+  <div id="page9" class="content">
+  <h3>effects</h3>
+  <pre>
+  <code>
+  $(<i>"#myDiv"</i>).<b>fadeIn</b>();
+  $(<i>".target"</i>).<b>show</b>();
+  $(<i>".target"</i>).<b>hide</b>();
+  $(<i>"#someDiv"</i>).<b>slideDown</b>(500);
+  $(<i>".target"</i>).<b>toggle</b>();
+  ...
+  </code>
+  </pre>
+  <a href="http://api.jquery.com/category/effects/" target="_blank">http://api.jquery.com/category/effects</a>
+  </div>
+
+<!-- scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#page0').fadeIn();
+    
+    $('.heading').on('click', function(){
+      $('#page0').fadeIn();
+    });
+
+    $('.page-btn').on('click', function(){
+      $('.content').fadeOut();
+      $('.page-btn').removeClass('active');
+    });
+    $('.page-btn').on('click', function(){
+      $(this).addClass('active');
+      $('#' + this.name).fadeIn();
+    });
+    /*$('#page2-btn').on('click', function(){
+      $('#page2').show();
+    });*/
+    $(document).keydown(function(e) {
+       if (e.keyCode == 37 || e.keyCode == 38){
+          $('button.active').prev().focus();
+          $('button.active').prev().trigger('click');
+       } else if (e.keyCode == 39 || e.keyCode  == 40){
+          $('button.active').next().focus();
+          $('button.active').next().trigger('click');
+       }
+    });
+  });
+</script>
+
+</body>
+</html>
