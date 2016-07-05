@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>quiz 1</title>
+  <link rel="stylesheet" type="text/css" href="../css/quiz.css">
+
+</head>
+<body>
+
+<div id="container">
+
+  <div id="tools">
+    <button id="left-btn" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span></button>
+    <button id="right-btn" class="btn btn-default"><span class="glyphicon glyphicon-arrow-right"></span></button>
+  </div>
+
+  <div class="content active">
+  <h1>quiz</h1>
+  
+  </div>
+
+  <div class="content">
+  <h3>difference?</h3>
+<pre>
+<code>
+$(document).ready(...); //jquery's
+
+and
+
+window.onload();
+</code>
+</pre>
+
+<div class="answer-box">
+<h3>answer</h3>  
+ <pre>
+ <code>
+ready event occurs after the HTML document has been loaded,<br>
+while the onload event occurs later, when all content (e.g. images)<br>
+also has been loaded
+ </code>
+ </pre>   
+  </div>
+
+
+  </div>
+
+  <div class="content">
+  <h3>difference?</h3>
+<pre>
+<code>  
+$("li:parent");
+$("li.parent");
+$("li").parent();
+$("li").parents();
+</code>
+</pre>  
+  </div>
+
+  <div class="content">
+  <h3>how to select elements inside a DOM element?</h3>
+<pre>
+<code>
+var myDomElement = document.getElementById( "myId" );
+
+// select all anchor tags inside myID
+</code>
+</pre>  
+
+ <div class="answer-box">
+<h3>answer</h3>  
+ <pre>
+ <code>
+ $(myDomElement).find('a');
+ </code>
+ </pre>   
+  </div>
+
+
+  </div>
+
+<div class="content">
+  <h3>how to test whether an element has a particular class?</h3>
+
+   <div class="answer-box">
+<h3>answer</h3>  
+ <pre>
+ <code>
+$("#myDiv").hasClass( "someClass" ); 
+ </code>
+ </pre>   
+  </div>
+  </div>
+
+  <div class="content">
+  <h3>output?</h3>
+<pre>
+<code>
+function func1()
+{
+  return {
+      type: "ABC"
+  };
+}
+
+function func2()
+{
+  return
+  {
+      type: "ABC"
+  };
+}
+
+console.log(func1());
+console.log(func2());
+</code>
+</pre>
+
+  </div>
+
+  <div class="content">
+  <h3>output?</h3>
+
+<pre>
+<code>
+function func1() {
+  var a = b = 3;
+}
+
+func1();
+
+console.log(a);
+console.log(b);
+</code>
+</pre>
+
+ <div class="answer-box">
+<h3>answer</h3>  
+ <pre>
+ <code>
+ undefined
+ 3
+ </code>
+ </pre>   
+  </div>
+
+  </div>
+
+  <div class="content">
+  <h3>output?</h3>
+<pre>
+<code>
+console.log(1.1 + 2.2);
+console.log(1.1 + 2.2 == 3.3);
+</code>
+</pre>
+
+  <div class="answer-box">
+<h3>answer</h3>  
+ <pre>
+ <code>
+ 3.3000000000000003
+ false
+ </code>
+ </pre>   
+  </div>
+
+  </div>
+
+  <div class="content">
+  <h3>output?</h3>
+<pre>
+<code>
+console.log(1); 
+setTimeout(function(){console.log(2)}, 1000); 
+setTimeout(function(){console.log(3)}, 0); 
+console.log(4);
+</code>
+</pre>
+
+  <div class="answer-box">
+<h3>answer</h3>  
+ <pre>
+ <code>
+1
+4
+3
+2
+ </code>
+ </pre>   
+  </div>
+
+  </div>
+
+  <div class="content">
+  <h3>output?</h3>
+<pre>
+<code>
+console.log(2 +  "2" + "2");
+</code>
+</pre>
+
+  <div class="answer-box">
+<h3>answer</h3>  
+ <pre>
+ <code>
+222
+ </code>
+ </pre>   
+  </div>
+
+
+  </div>
+
+  <div class="content">
+<h3>output?</h3>
+<pre>
+<code>
+console.log(2 +  +"2" + "2");
+</code>
+</pre>
+
+  <div class="answer-box">
+<h3>answer</h3>  
+ <pre>
+ <code>
+42
+ </code>
+ </pre>   
+  </div>
+
+  </div>
+
+  <div class="content">
+  <h3>output?</h3>
+<pre>
+<code>
+console.log(false == '0');
+</code>
+</pre> 
+
+  <div class="answer-box">
+<h3>answer</h3>  
+ <pre>
+ <code>
+true
+ </code>
+ </pre>   
+  </div>
+  </div>
+
+  <div class="content">
+  <h3>output?</h3>
+<pre>
+<code>
+console.log(false === '0');
+</code>
+</pre> 
+
+  <div class="answer-box">
+<h3>answer</h3>  
+ <pre>
+ <code>
+false
+ </code>
+ </pre>   
+  </div>
+  </div>
+
+  <div class="content">
+  <h3>which is more efficient?</h3>
+<pre>
+<code>
+document.getElementById( "someId" );
+
+or
+
+$( "#someId" );
+</code>
+</pre> 
+  </div>
+
+
+  <div class="content">
+  <h3>difference?</h3>
+<pre>
+<code>
+$('#myDiv').detach();
+$('#myDiv').remove();
+</code>
+</pre>
+  </div>
+
+  <div class="content">
+  <h3>how can you make a div round?</h3>
+  <div id="roundDiv"></div>
+  <div class="answer-box">
+<h3>answer</h3>  
+ <pre>
+ <code>
+$( "#myDiv" ).css("border-radius", "50%");
+ </code>
+ </pre>   
+  </div>
+
+  </div>
+
+  <div class="content">
+  <h3>how to determine the state of a toggled element?</h3>
+  <div class="answer-box">
+<h3>answer</h3>  
+ <pre>
+ <code>
+$( "#myDiv" ).is( ":visible" );
+$( "#myDiv" ).is( ":hidden" );
+ </code>
+ </pre>   
+  </div>
+  </div>
+ 
+  <div class="content">
+  <h3>how to change the src attribute of an image at run-time?</h3>
+  <div class="answer-box">
+<h3>answer</h3>  
+ <pre>
+ <code>
+$( "img#myDiv" ).attr("src", "NEW_SRC_PATH");
+ </code>
+ </pre>   
+  </div>
+  </div>
+ 
+
+  <div class="content">
+  <h3>how can you animate a div from top-left corner to bottom-right corner?</h3>
+  <div id="myBox">Click me!</div>
+  </div>
+
+  <div class="content">
+  <h3></h3>
+  </div>
+
+<!-- scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('#left-btn').on('click', function(){
+      //$('.content').hide();
+      $('.content.active').prev().addClass('active');
+      $('.content.active').next('.active').removeClass('active');
+    });
+
+    $('#right-btn').on('click', function(){
+      //$('.content').hide();
+      $('.content.active').next().addClass('active');
+      $('.content.active').prev().removeClass('active');
+    });
+
+    $('#myBox').on('click', function(){
+      $('#myBox').animate({right:'10%', bottom:'10%'}, 5000);
+    });
+
+    $(document).keydown(function(e) {
+       if (e.keyCode == 37 || e.keyCode == 38){
+          $('#left-btn').trigger('click');
+       } else if (e.keyCode == 39 || e.keyCode  == 40){
+          $('#right-btn').trigger('click');
+       }
+    });
+  });
+</script>
+
+</body>
+</html>
