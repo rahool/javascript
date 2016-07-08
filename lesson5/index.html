@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+  <style type="text/css">
+body{
+  margin: 0;
+  font-family: Tahoma;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+}    
+.col {
+  width: 30vw;
+  height: 100%;
+  float: left;
+}
+
+#col1 {
+  background-color: #ff7777;
+}
+
+#col2 {
+  width: 40vw;
+  background-color: #77ff77;
+}
+
+#col3 {
+  background-color: #7777ff;
+}
+
+#header {
+  height: 10vh;
+  padding: 0px;
+  padding-bottom: 21px;
+  padding-left: 21px;
+  border-bottom: 1px solid;
+  box-shadow: 0px 11px 11px -11px rgba(0,0,0,0.75);
+  background-color: #05568d;
+  color: #fff;
+}
+
+.content {
+  height: 90vh;
+  display: none;
+  font-size: 4vh;
+  padding-left: 5vh;
+}
+
+.page-btn {
+  width: 7%;
+  height: 100%;
+  border: none;
+  background: none;
+  border-top: 2px solid #eee;
+  cursor: pointer;
+}
+
+.page-btn:focus {
+  border: none;
+  border-top: 7px solid #eee;
+  outline: none;
+}
+
+.active {
+  border: none;
+  outline: none;
+  display: block;
+}
+
+.heading {
+  font-size: 5vh;
+  font-weight: bold;
+  padding: 10px;
+  font-style: italic;
+  margin-right: 5vw;
+  cursor: pointer;
+}
+
+pre {
+  margin: 0;
+}
+
+b {
+  text-shadow: 0px 0px 1px #05568d;
+  color: #05568d;
+}
+
+b:hover {
+  color: #FF6961;
+}
+
+#tools {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+h1 {
+  font-size: 50vh;
+}
+
+#myBox {
+  background-color: green;
+  position: absolute;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}  
+
+#myBox:hover {
+  background-color: lime;
+}
+
+#roundDiv {
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+#roundDiv:hover {
+  background-color: yellow;
+}
+
+.answer-box {
+  color: #9e9e9e;
+  opacity: 0.2;
+  position: absolute;
+  bottom: 0;
+}
+
+.answer-box:hover {
+  color: #000;
+  opacity: 1;
+}
+
+.answer-box h3{
+  color: red;
+}
+
+.answer-box pre{
+  opacity: 0.1;
+}
+
+.answer-box pre:hover{
+  opacity: 0.5;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+
+  <div id="tools">
+    <button id="left-btn" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left">&larr;</span></button>
+    <button id="right-btn" class="btn btn-default"><span class="glyphicon glyphicon-arrow-right">&rarr;</span></button>
+  </div>
+
+  <div class="content active">
+  <h1>canvas</h1>
+  
+  </div>
+
+  <div class="content">
+  <h3>&lt;canvas&gt; is an HTML element</h3>
+  <h3>used to draw graphics using scripting</h3>
+  <h4>some applications</h4>
+  <ul>
+  <li>draw graphs</li>
+  <li>make photo compositions</li>
+  <li>do animations</li>
+  </ul>
+
+  </div>
+
+  <div class="content">
+  <h3>&lt;canvas&gt; element</h3>
+  <pre>
+  <code>
+<b>&lt;canvas id="my-canvas" width="150" height="150"&gt;&lt;/canvas&gt;</b>
+  </code>
+  </pre>
+
+  <h3>&lt;canvas&gt; element is not supported in some older browsers</h3>
+  <h4>fallback content</h4>
+  <pre>
+  <code>
+<b>&lt;canvas id="my-canvas" width="150" height="150"&gt;</b>Not supported!<b>&lt;/canvas&gt;</b>
+<b>&lt;canvas id="my-canvas" width="150" height="150"/&gt;</b>
+&nbsp;&nbsp;&lt;img src="IMAGE_PATH"&gt;
+<b>&lt;/canvas&gt;</b>
+  </code>
+  </pre>
+  </div>
+
+  <div class="content">
+  <h3>access the rendering context</h3>
+  <h2>getContext()</h2>
+  <pre>
+  <code>
+var canvas = document.getElementById('my-canvas');
+var ctx = canvas.<b>getContext</b>('2d');
+  </code>
+  </pre>
+  </div>
+
+  <div class="content">
+  <h3>grid</h3>
+  <img src="images/canvas_grid.jpg" width='300px'></img>
+  </div>
+
+  <div class="content">
+  <h3>rectangles</h3>
+  <h5>only primitive shape supported by canvas</h5>
+  <h5>all other shapes are created using paths</h5>
+  <pre>
+  <code>
+var ctx = canvas.getContext('2d');
+
+//draws a filled rectangle
+ctx.<b>fillRect</b>(25,25,100,100); 
+
+//draws a rectangular outline
+ctx.<b>clearRect</b>(45,45,60,60); 
+
+//clears the specified rectangular area
+ctx.<b>strokeRect</b>(50,50,50,50); 
+
+  </code>
+  </pre>
+  </div>
+
+  <div class="content">
+  <h3>draw rectangles</h3>
+<pre>
+<code>
+var canvas = document.getElementById('my-canvas');
+var ctx = canvas.getContext('2d');
+
+//draws a filled rectangle
+ctx.fillRect(25, 25, 100, 100); 
+
+//draws a rectangular outline
+ctx.clearRect(45, 45, 60, 60); 
+
+//clears the specified rectangular area
+ctx.strokeRect(50, 50, 50, 50);
+</code>
+</pre>  
+  </div>
+
+  <div class="content">
+  <h3>paths</h3>
+
+  <h4>how to?</h4>
+  <h4>create the path - <b>beginPath()</b></h4>
+  <h4>use drawing commands to draw into the path</h4>
+  <h4>close the path - <b>closePath()</b></h4>
+  <h4>stroke or fill the path to render it - <b>stroke()</b> / <b>fill()</b></h4>
+  </div>
+
+  <div class="content">
+  <h3>drawing on canvas</h3>
+  <h3><b>moveTo(x, y)</b></h3>
+  <h3><b>lineTo(x, y)</b></h3>
+  <h3><b>arc(x, y, radius, startAngle, endAngle, anticlockwise)</b></h3>
+  <h3><b>arcTo(x1, y1, x2, y2, radius)</b></h3>
+  <h3><b>quadraticCurveTo(cp1x, cp1y, x, y)</b></h3>
+  <h3><b>bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)</b></h3>
+  <h3><b>rect(x, y, width, height)</b></h3>
+  </div>
+
+  <div class="content">
+  <h3>draw a triangle</h3>
+<pre>
+<code>
+var canvas = document.getElementById('my-canvas');
+var ctx = canvas.getContext('2d');
+
+ctx.beginPath();
+ctx.moveTo(250, 100);
+ctx.lineTo(100, 400);
+ctx.lineTo(400, 400);
+ctx.fill();
+</code>
+</pre>  
+  </div>
+
+ <div class="content">
+  <h3>draw a circle</h3>
+<pre>
+<code>
+var canvas = document.getElementById('my-canvas');
+var ctx = canvas.getContext('2d');
+
+ctx.beginPath();
+ctx.arc(250, 250, 100, 0, 2*Math.PI, true);
+ctx.fill();
+
+</code>
+</pre>  
+  </div>
+
+<div class="content">
+  <h3>draw an arc</h3>
+<pre>
+<code>
+var canvas = document.getElementById('my-canvas');
+var ctx = canvas.getContext('2d');
+
+ctx.beginPath();
+ctx.arc(250, 250, 100, 0, Math.PI, false);
+ctx.stroke();
+</code>
+</pre>  
+  </div>
+
+<div class="content">
+  <h3>draw an arc</h3>
+<pre>
+<code>
+var canvas = document.getElementById('my-canvas');
+var ctx = canvas.getContext('2d');
+
+ctx.beginPath();
+ctx.moveTo(250, 250);
+ctx.arcTo(350, 250, 350, 350, 100);
+ctx.stroke();
+</code>
+</pre>  
+  </div>
+
+<div class="content">
+  <h3>draw quadratic curve</h3>
+<pre>
+<code>
+var canvas = document.getElementById('my-canvas');
+var ctx = canvas.getContext('2d');
+
+ctx.beginPath();
+ctx.moveTo(20, 20);
+ctx.quadraticCurveTo(200, 100, 20, 200);
+ctx.stroke();
+</code>
+</pre>  
+  </div>
+
+<div class="content">
+  <h3>draw bezier curve</h3>
+<pre>
+<code>
+var canvas = document.getElementById('my-canvas');
+var ctx = canvas.getContext('2d');
+
+ctx.beginPath();
+ctx.moveTo(20, 100);
+ctx.bezierCurveTo(50, 200, 150, 50, 300, 100);
+ctx.stroke();
+</code>
+</pre>  
+  </div>
+
+  <div class="content">
+  <h3>Path2D objects</h3>
+ <pre>
+ <code>
+new <b>Path2D</b>();     // empty path object
+new <b>Path2D</b>(path); // copy from another Path2D object
+new <b>Path2D</b>(d);    // path from SVG path data  
+ </code>
+ </pre> 
+ <pre>
+ <code>
+var rectangle = new Path2D();
+rectangle.rect(10, 10, 70, 70);
+ctx.stroke(rectangle);
+
+var circle = new Path2D();
+circle.moveTo(100, 25);
+circle.arc(100, 35, 25, 0, 2 * Math.PI);
+ctx.fill(circle);
+ </code>
+ </pre>
+  </div>
+
+  <div class="content">
+  <h3>styles and colors</h3>
+ <pre>
+ <code>
+ctx.<b>fillStyle</b> = "#FFA500";
+ctx.<b>strokeStyle</b> = "red";
+ctx.<b>globalAlpha</b> = 0.2;
+ctx.<b>lineWidth</b> = 3;
+
+//createLinearGradient(x1, y1, x2, y2)
+var lineargradient = ctx.<b>createLinearGradient</b>(0, 0, 200, 200); 
+lineargradient.<b>addColorStop</b>(0, 'red');
+lineargradient.<b>addColorStop</b>(0.5, 'blue');
+lineargradient.<b>addColorStop</b>(1, 'black');
+
+//createRadialGradient(x1, y1, r1, x2, y2, r2);
+var radgrad = ctx.<b>createRadialGradient</b>(75, 75, 0, 75, 75, 100); 
+radgrad.<b>addColorStop</b>(0, 'red');
+radgrad.<b>addColorStop</b>(0.9, 'blue');
+radgrad.<b>addColorStop</b>(1, 'yellow');
+
+
+ </code>
+ </pre> 
+  </div>
+
+  <div class="content">
+  <h3>linear gradient</h3>
+<pre>
+<code>
+var canvas = document.getElementById('my-canvas');
+var ctx = canvas.getContext('2d');
+
+var lineargradient = ctx.createLinearGradient(0, 0, 480, 0); 
+lineargradient.addColorStop(0, "violet");
+lineargradient.addColorStop(0.5, "indigo");
+lineargradient.addColorStop(1, "blue");
+
+ctx.fillStyle = lineargradient;
+ctx.rect(10, 200, 480, 100);
+ctx.fill();  
+</code>
+</pre>  
+  </div>
+
+  <div class="content">
+  <h3>text</h3>
+<pre>
+<code>
+//filled using the current fillStyle
+ctx.<b>fillText</b>("Hello world", 100, 150); 
+
+//filled using the current strokeStyle
+ctx.<b>strokeText</b>("Hello world", 100, 150); 
+</code>
+</pre>  
+  </div>
+
+  <div class="content">
+  <h3>images</h3>
+<pre>
+<code>
+ctx.<b>drawImage</b>(image, x, y);
+ctx.<b>drawImage</b>(image, x, y, width, height); //scaling
+
+//use of image smoothing algorithms when scaling images
+ctx.<b>imageSmoothingEnabled</b> = false; 
+</code>
+</pre>  
+
+image can be a reference to an HTMLImageElement object or another canvas element
+
+<h5>image from scratch</h5>
+<pre>
+<code>
+var img = <b>new Image</b>();   // Create new img element
+img.src = 'myImage.png'; // Set source path  
+</code>
+</pre>
+  </div>
+
+  <div class="content">
+  <h3>draw image</h3>
+<pre>
+<code>
+var canvas = document.getElementById('my-canvas');
+var ctx = canvas.getContext('2d');
+
+var img = new Image();
+img.src = "https://upload.wikimedia.org/wikipedia/commons/5/54/Tigress_at_Jim_Corbett_National_Park.jpg";
+img.onload = function(){
+  ctx.drawImage(img, 0, 0, 500, 500);
+};
+</code>
+</pre>  
+  </div>
+
+
+  <div class="content">
+  <h3>save/restore</h3>
+<pre>
+<code>
+<b>save</b>(); //saves the entire state of the canvas
+<b>restore</b>(); //restores the most recently saved canvas state
+
+</code>
+</pre>  
+  </div>
+
+ <div class="content">
+  <h3>transformations</h3>
+  <h3><b>translate</b>(x, y);</h3>
+  <h3><b>rotate</b>(angle);</h3>
+  <h3><b>scale</b>(x, y);</h3>
+  </div>
+
+  <div class="content">
+  <h3>transformations example</h3>
+<pre>
+<code>
+var canvas = document.getElementById('my-canvas');
+var ctx = canvas.getContext('2d');
+ctx.fillRect(0, 0, 300, 50);
+ctx.translate(80, 80);
+ctx.fillRect(0, 0, 300, 50);
+
+ctx.scale(2, 2);
+ctx.fillRect(0, 50, 300, 50);
+
+ctx.rotate(Math.PI/2);
+ctx.fillRect(0, 10, 300, 50);
+</code>
+</pre>  
+  </div>
+
+   <div class="content">
+  <h3>saving images</h3>
+ <pre>
+ <code>
+canvas.<b>toDataURL</b>('image/png');
+ </code>
+ </pre> 
+use it as the source of any &lt;image&gt; or put it into a hyper link with a download attribute to save it to disc
+<pre>
+<code>
+var canvas = document.getElementById('my-canvas');
+
+var image = canvas.toDataURL('image/png');
+var imageElement = document.getElementsById("imgEle");
+imageElement.src = image;
+</code>
+</pre>
+  </div>
+
+   <div class="content">
+  <h3></h3>
+  </div>
+
+
+<!-- scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('#left-btn').on('click', function(){
+      //$('.content').hide();
+      $('.content.active').prev().addClass('active');
+      $('.content.active').next('.active').removeClass('active');
+    });
+
+    $('#right-btn').on('click', function(){
+      //$('.content').hide();
+      $('.content.active').next().addClass('active');
+      $('.content.active').prev().removeClass('active');
+    });
+
+    $(document).keydown(function(e) {
+       if (e.keyCode == 37 || e.keyCode == 38){
+          $('#left-btn').trigger('click');
+       } else if (e.keyCode == 39 || e.keyCode  == 40){
+          $('#right-btn').trigger('click');
+       }
+    });
+  });
+</script>
+
+</body>
+</html>
